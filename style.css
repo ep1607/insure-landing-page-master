@@ -198,10 +198,28 @@ h4 {
   color: #fafafa;
 }
 
+.blur {
+  -webkit-filter: blur(3px);
+  -moz-filter: blur(3px);
+  -o-filter: blur(3px);
+  -ms-filter: blur(3px);
+  filter: blur(3px);
+}
+
 @media (min-width: 375px) {
   main, footer {
     text-align: center;
   }
+}
+
+button {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
 }
 
 .header {
@@ -225,6 +243,53 @@ h4 {
 }
 .header nav .nav-control {
   float: right;
+}
+.header nav .nav-control #menu-toggle {
+  width: 32px;
+  height: 32px;
+  background-image: url(images/icon-hamburger.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.header nav #mobile-menu {
+  background-color: #2d2640;
+  background-image: url(images/bg-pattern-mobile-nav.svg);
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: contain;
+  transition: all 0.5s ease-in-out;
+  display: block;
+  /*if opacity == easier to work woth transition*/
+  opacity: 0;
+  position: absolute;
+  width: 100vw;
+  height: calc(100vh - 78px);
+  right: 0;
+  top: 78px;
+  text-align: center;
+  z-index: 1;
+  text-transform: uppercase;
+  font-family: "Karla", sans-serif;
+  font-weight: 400;
+}
+.header nav #mobile-menu ul {
+  padding: 27px 25px 25px 25px;
+}
+.header nav #mobile-menu ul li {
+  padding: 17px;
+  margin: 7px 0px;
+}
+.header nav #mobile-menu ul li:hover {
+  -webkit-box-shadow: inset 0px 0px 0px 1px #fff;
+  -moz-box-shadow: inset 0px 0px 0px 1px #fff;
+  box-shadow: inset 0px 0px 0px 1px #fff;
+}
+.header nav #mobile-menu a {
+  font-size: 1.35em;
+  letter-spacing: 1.3px;
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
 }
 
 h1, h2, h3 {

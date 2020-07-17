@@ -6,6 +6,7 @@
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="style.css">
+  <script src="main.js"></script>
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap" rel="stylesheet">
   
@@ -26,18 +27,20 @@
     </div> <!-- /logo -->
     <nav>
       <div class="nav-control">
-        <img src="images/icon-hamburger.svg" class="icon-hamburger"></i>
+        <button id="menu-toggle" class="icon-hamburger" onclick="mobileMenu()"></button>
       </div> <!-- /nav-control -->
-      <ul class="nav-list" style="display: block; height: 0px; max-height: 617px; opacity: 0;">
-        <li>How we work</li>
-        <li>Blog</li>
-        <li>Account</li>
-        <li>View plans</li>
-      </ul>
+      <div id="mobile-menu" class="nav-list">
+        <ul>
+          <li><a href="#">How we work</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Account</a></li>
+          <li><a href="#">View plans</a></li>
+        </ul>
+      </div>
     </nav>
   </div> <!-- /header -->
 
-  <main>
+  <main id="main-content">
     <div class="mobile-image-container" class="sm-10">
       <img src="images/image-intro-mobile.jpg" alt="">
     </div>
@@ -88,7 +91,7 @@
     </section> <!-- /section how we work-->
   </main>
 
-  <footer>
+  <footer id="footer-content">
     <section class="social-links"> 
       <img src="images/logo.svg" alt="" class="src">
       <div class="social-links-list col">
