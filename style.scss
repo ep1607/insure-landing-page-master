@@ -2,7 +2,306 @@
 @use 'grid';
 
 
+$Dark-Violet: hsl(256, 26%, 20%);
+$Grayish-Blue: hsl(216, 30%, 68%);
+
+$Very-Dark-violet: hsl(270, 9%, 17%);
+$Dark-Grayis-Violet: hsl(273, 4%, 51%);
+$very-light-gray: hsl(0, 0%, 98%);
+
+/*general  styles*/
 
 main {
     display:block;
+    font-size: 0;
+}
+
+p, a, span, h4 {
+    font-family: 'Karla', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+h4 {
+  font-weight: 700;
+}
+
+.light {
+  color: white;
+}
+
+.light-gray {
+  color: $very-light-gray;
+}
+
+main, footer {
+    @media (min-width: 375px) {
+        text-align: center;
+    }
+ }
+
+.header {
+    display: block;
+    height: 78px;
+    .logo, nav {
+        display: inline-block;
+        padding-top: 31px;
+        padding-bottom: 26px;
+    }
+    .logo {
+        float: left;
+        padding-left: 24px;
+    }
+    nav {
+        float: right;
+        padding-right: 24px;
+        padding-top: 24px;
+        padding-bottom: 22px;
+        .nav-control {
+            float: right;
+        }
+    }
+}
+
+h1, h2, h3 {
+    font-family: 'DM Serif Display', serif;
+    font-weight: 400;
+    text-align: center;
+}
+
+h1 {
+    font-size: 47px;
+    padding-bottom: 19px;
+}
+
+main {
+
+    section {
+        padding-left: 20px;
+        padding-right: 20px;
+        p {
+            line-height: 1.65em;
+        }
+    }
+}
+
+.btn {
+    text-transform: uppercase;
+    text-decoration: none;
+    cursor: pointer;
+    color: white;
+    span {
+        border: 1px solid white;
+        padding: 11px 27px 11px 27px;
+        font-size: 0.83em;
+        letter-spacing: 1.7px;
+    }
+
+}
+
+/* mobile and desktop line breaks */
+@media all and (min-width:376px) {
+    .desktop-br {
+        display: inline;
+    }
+    .mobile-br {
+        display: none;
+    }
+}
+@media all and (max-width:375px) {
+    .desktop-br {
+        display: none;
+    }
+    .mobile-br {
+        display: inline;
+    }
+ }
+
+.mobile-image-container {
+  img 
+    {
+      width: 100%;
+    }
+}
+    
+/*section specific styles*/
+ #humanizing {
+    background-color:hsl(256, 26%, 20%);
+    background-image: 
+        url(images/bg-pattern-intro-left-mobile.svg);
+        //url(images/bg-pattern-intro-right-mobile.svg);
+    background-repeat: no-repeat;
+    background-position:
+        top left;
+        //bottom right;
+    padding-top: 93px;
+    padding-bottom: 105px; 
+    margin-bottom: 142px;
+    background-blend-mode: difference;
+    position: relative;
+
+    #background-right {
+        color: white;
+        height: 330px;
+        width: 100%;
+        left: 0;
+        top: 345px;
+        //background-color: yellowgreen;
+        position: absolute;
+        background-image: url(images/bg-pattern-intro-right-mobile.svg);
+        background-repeat: no-repeat;
+        background-position: top right;
+    }
+    p {
+      padding-bottom: 42px;
+    }
+ }
+
+ #different {
+    div {
+      margin: auto;
+      width: 323px;
+    }
+    h1 {
+        padding-top: 39px;
+        padding-bottom: 80px;
+    }
+    h1::before {
+      background-color: $Grayish-Blue; 
+      content: '';
+      display: block;
+      height: 1px;
+      position: absolute;
+      width: 150px;
+      left: 50%;
+      transform: translate(-50%,0);
+      margin-top: -39px;
+    }
+
+    h3 {
+        font-size: 27px;
+        padding-bottom: 20px;
+    }
+
+    img {
+        padding-bottom: 40px;
+    }
+
+    p {
+      font-size: 16px;
+      padding-bottom: 58px;
+      line-height: 1.62em;
+      color: $Dark-Grayis-Violet;
+    }
+ }
+
+#how-we-work {
+  margin-left: 23px;
+  margin-right: 23px;
+  padding-top: 75px;
+  margin-top: 85px;
+  height: 270px;
+  background-color: $Dark-Violet;
+  background-image: url(images/bg-pattern-how-we-work-mobile.svg);
+  background-blend-mode: difference;
+  background-repeat: no-repeat;
+  background-position: top right;
+  margin-bottom: 140px;
+
+  h1 {
+    font-size: 39px;
+    padding-bottom: 50px;
+  }
+
+  .btn span {
+    padding: 12px 25px 12px 25px;
+  }
+
+}
+
+footer {
+  background-image: url(images/bg-pattern-footer-mobile.svg);
+  background-color: $very-light-gray;
+  background-size: contain;
+  background-repeat: no-repeat;
+  padding-bottom: 30px;
+  img {
+    padding-top: 85px;
+  }
+  .social-links {
+    height: 200px;
+    .social-links-list {
+      height: 50px;
+      padding-top: 30px;
+      padding-bottom: 30px;
+        .icon {
+          width: 24px;
+          height: 24px;
+          margin-left: 12px;
+          background-size: contain;
+          background-repeat: no-repeat;
+          display: inline-block;
+        }
+        .icon:first-child {
+          margin-left: 0px;
+        }
+        .fb-icon {
+          background-image: url(images/icon-facebook.svg);
+        }
+      
+        .twitter-icon {
+          background-image: url(images/icon-twitter.svg);
+        background-position-y: 2px;
+        }
+      
+        .pinterest-icon {
+          background-image: url(images/icon-pinterest.svg);
+        }
+      
+        .instagram-icon {
+          background-image: url(images/icon-instagram.svg);
+        }
+    }
+    .social-links-list::after {
+      background-color: $Grayish-Blue; 
+      content: '';
+      display: block;
+      position: absolute;
+      height: 1px;
+      width: 320px;
+      left: 50%;
+      transform: translate(-50%,0);
+      margin-top: 37px;
+    }
+  }
+
+  .site-links {
+    padding-top: 14px;
+    h4 {
+      padding-top: 30px;
+      padding-bottom: 30px;
+      text-transform: uppercase;
+      font-size: 0.85em;
+      color: $Dark-Grayis-Violet;
+      letter-spacing: 1.1px;
+    }
+  
+    ul li  {
+      line-height: 30px;
+      a {
+        text-transform: uppercase;
+        text-decoration: none;
+        font-size: 0.85em;
+        letter-spacing: 1.1px;
+        font-weight: 700;
+        color: black;
+  
+      }
+    }
+  }
+}
+
+.attribution {
+  padding-top: 20px;
+  padding-bottom: 20px;
 }

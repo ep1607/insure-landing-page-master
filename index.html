@@ -6,6 +6,9 @@
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap" rel="stylesheet">
+  
   <title>Frontend Mentor | Insure landing page</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
@@ -15,7 +18,7 @@
   </style>
 </head>
 <body>
-  <div class="header">
+  <div class="header sm-10">
     <div class="logo">
       <a class="logo-link" href="#">
         <img src="images/logo.svg" alt="insure-logo" class="logo-img">
@@ -23,7 +26,7 @@
     </div> <!-- /logo -->
     <nav>
       <div class="nav-control">
-        <i class="icon-hamburger"></i>
+        <img src="images/icon-hamburger.svg" class="icon-hamburger"></i>
       </div> <!-- /nav-control -->
       <ul class="nav-list" style="display: block; height: 0px; max-height: 617px; opacity: 0;">
         <li>How we work</li>
@@ -35,81 +38,79 @@
   </div> <!-- /header -->
 
   <main>
+    <div class="mobile-image-container" class="sm-10">
+      <img src="images/image-intro-mobile.jpg" alt="">
+    </div>
 
-    <section id="humanizing">  
+    <section id="humanizing" class="sm-10">  
+      <h1 class="light">Humanizing<br> your insurance.</h1>
+      <p class="light-gray">Get your life insurance coverage easier and faster. We blend our expertise and<br class="mobile-br"> technology to help you find the plan that’s right for you. Ensure you and your loved<br class="mobile-br"> ones are protected.</p>
       
-      <h1 class="light">Humanizing your insurance.</h1>
-
-      <p>Get your life insurance coverage easier and faster. We blend our expertise 
-        and technology to help you find the plan that’s right for you. Ensure you 
-        and your loved ones are protected.</p>
-    
       <a href="#" class="btn"><span>View plans</span></a>
+      
+      <div id="background-right"></div>
 
     </section> <!-- /section humanizing-->
 
-    <section id="different"> 
+    <section id="different" class="sm-10"> 
 
       <h1 class="dark">We’re different</h1>
+      
+      <div>
+        <img src="images/icon-snappy-process.svg" alt="icon-snappy-process">
+        <h3>Snappy Process</h3>
+        <p>Our application process can be completed in minutes, not hours. Don’t get 
+          stuck filling in tedious forms.</p>
+      </div>
 
-      <h3>Snappy Process</h3>
-    
-      <p>Our application process can be completed in minutes, not hours. Don’t get 
-        stuck filling in tedious forms.</p>
-    
-      <h3>Affordable Prices</h3>
-    
-      <p>We don’t want you worrying about high monthly costs. Our prices may be low, 
-      but we still offer the best coverage possible.</p>
-    
-      <h3>People First</h3>
-    
-      <p>Our plans aren’t full of conditions and clauses to prevent payouts. We make 
-      sure you’re covered when you need it.</p>
-    
+      <div>
+        <img src="images/icon-affordable-prices.svg" alt="icon-affordable-prices">
+        <h3>Affordable Prices</h3>
+        <p>We don’t want you worrying about high monthly costs. Our prices may be low, 
+        but we still offer the best coverage possible.</p>
+      </div>
+      
+      <div>
+        <img src="images/icon-people-first.svg" alt="icon-people-first">
+        <h3>People First</h3>
+        <p>Our plans aren’t full of conditions and clauses to prevent payouts. We make 
+        sure you’re covered when you need it.</p>
+      </div>
+
     </section> <!-- /section different-->
 
-    <section id="how-we-work">
+    <section id="how-we-work" class="sm-10">
 
-      Find out more about how we work
+      <h1 class="light">Find out more about how we work</h1>
 
       <a href="#" class="btn"><span>How we work</span></a>
 
     </section> <!-- /section how we work-->
   </main>
 
-
   <footer>
-
-    <section class="social-links">
-      <div class="social-links-list">
-        <a href="">
-          <i class="fb-icon"></i>
-        </a>
-        <a href="">
-          <i class="twitter-icon"></i>
-        </a>
-        <a href="">
-          <i class="pinterest-icon"></i>
-        </a>
-        <a href="">
-          <i class="instagram-icon"></i>
-        </a>
+    <section class="social-links"> 
+      <img src="images/logo.svg" alt="" class="src">
+      <div class="social-links-list col">
+        <a href="#" class="icon fb-icon"></a>
+        <a href="#" class="icon twitter-icon"></a>
+        <a href="#" class="icon pinterest-icon"></a>
+        <a href="#" class="icon instagram-icon"></a>
       </div>
     </section> <!-- /section Social Links -->
 
     <section class="site-links">
-      <div>
+      <div class="sm-10">
         <h4>Our company</h4>
         <ul>
           <li><a href="#">How we work</a></li>
           <li><a href="#">Why Insure?</a></li>
-          <li><a href="#">View plans</a></li>
+          <li><a href="#">Check Price</a></li>
           <li><a href="#">Reviews</a></li>
         </ul>
       </div>
 
-      <div>
+      <div class="sm-10">
         <h4>Help me</h4>
         <ul>
           <li><a href="#">FAQ</a></li>
@@ -119,7 +120,7 @@
         </ul>
       </div>
 
-      <div>
+      <div class="sm-10">
         <h4>Contact</h4>
         <ul>
           <li><a href="#">Sales</a></li>
@@ -128,7 +129,7 @@
         </ul>
       </div>
 
-      <div>
+      <div class="sm-10">
         <h4>Others</h4>
         <ul>
           <li><a href="#">Careers</a></li>
@@ -142,7 +143,7 @@
   
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+    Coded by <a href="#">evelink</a>.
   </div>
 </body>
 </html>
