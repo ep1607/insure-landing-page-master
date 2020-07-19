@@ -76,7 +76,8 @@ button {
         padding-right: 24px;
         padding-top: 24px;
         padding-bottom: 22px;
-        .nav-control {
+        #mobile-nav {
+          .nav-control {
             float: right;
             #menu-toggle {
               width: 32px;
@@ -85,48 +86,55 @@ button {
               background-size: contain;
               background-repeat: no-repeat;
             }
-        }
-        #mobile-menu {
-          background-color: $Dark-Violet;
-          background-image: url(images/bg-pattern-mobile-nav.svg);
-          background-repeat: no-repeat;
-          background-position: bottom;
-          background-size: contain;
-          transition: all .5s ease-in-out;
-          display: block;
-          /*if opacity == easier to work woth transition*/
-          opacity: 0;
-          position: absolute;
-          width: 100vw;
-          height: calc(100vh - 78px);
-          right: 0;
-          top: 78px;
-          text-align: center;
-          z-index: 1;
-          text-transform: uppercase;
-          font-family: 'Karla', sans-serif;
-          font-weight: 400;
-          ul {
-            padding: 27px 25px 25px 25px;
-            li {
-              padding: 17px;
-              margin: 7px 0px;
-            }
-            li:hover {
-              //shadow insted of border. So that it can be displayed inside the li
-              -webkit-box-shadow:inset 0px 0px 0px 1px #fff;
-              -moz-box-shadow:inset 0px 0px 0px 1px #fff;
-              box-shadow:inset 0px 0px 0px 1px #fff;
-            }
           }
-          a {
-            font-size: 1.35em;
-            letter-spacing: 1.3px;
-            text-decoration: none;
-            color: white;
-            cursor: pointer;
-          }          
-        }
+          #mobile-menu {
+            background-color: $Dark-Violet;
+            background-image: url(images/bg-pattern-mobile-nav.svg);
+            background-repeat: no-repeat;
+            background-position: bottom;
+            background-size: contain;
+            transition: all .5s ease-in-out;
+            display: block;
+            /*if opacity == easier to work woth transition*/
+            opacity: 0;
+            position: absolute;
+            width: 100vw;
+            height: calc(100vh - 80px);
+            right: 0;
+            top: 80px;
+            text-align: center;
+            z-index: 1;
+            text-transform: uppercase;
+            font-family: 'Karla', sans-serif;
+            font-weight: 400;
+            ul {
+              padding: 27px 25px 25px 25px;
+              li {
+                padding: 17px;
+                margin: 7px 0px;
+              }
+              li:last-child {
+                //shadow insted of border. So that it can be displayed inside the li
+                -webkit-box-shadow:inset 0px 0px 0px 1px #fff;
+                -moz-box-shadow:inset 0px 0px 0px 1px #fff;
+                box-shadow:inset 0px 0px 0px 1px #fff;
+              }
+              li:hover {
+                background-color: white;
+                a {
+                  color: $Dark-Violet;
+                }
+              }
+            }
+            a {
+              font-size: 1.35em;
+              letter-spacing: 1.3px;
+              text-decoration: none;
+              color: white;
+              cursor: pointer;
+            }          
+          }
+        } /* !- end mobile-nav */
     }
 }
 
@@ -225,7 +233,7 @@ main {
  }
 
  #different {
-    div {
+    div div {
       margin: auto;
       width: 323px;
     }
@@ -280,7 +288,7 @@ main {
     padding-bottom: 50px;
   }
 
-  .btn span {
+  .btn {
     padding: 12px 25px 12px 25px;
   }
 
@@ -368,7 +376,251 @@ footer {
   }
 }
 
+.desktop-image-container {
+  display: none;
+}
+.mobile-image-container {
+  display: block;
+}
+
 .attribution {
   padding-top: 20px;
   padding-bottom: 20px;
 }
+
+
+@media only screen and (max-width: 1439px) {
+  //start showing nav button
+  #desktop-nav {
+    display: none;
+  }
+
+  #mobile-nav {
+    display: block;
+  }
+  
+}
+
+@media only screen and (min-width: 1440px) {
+
+  main section {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+
+  a.btn span {
+    font-weight: 700;
+  }
+
+  a.btn:hover span{
+    background-color: white;
+    color: $Dark-Violet;
+  }
+
+  .content-container {
+    width: 1110px;
+    margin: auto;
+  }
+
+  .header {
+    .logo, nav {
+      padding-left: 0;
+      padding-right: 0;
+    }
+    nav {
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+  }
+
+  #desktop-nav {
+    padding-top: 23px;
+    display: block;
+    height: 100%;
+
+    ul {
+      li {
+      display: inline-block;
+      text-transform: uppercase;
+      font-family: 'Karla', sans-serif;
+      padding: 12px 25px 12px 25px;
+  
+        a {
+          font-weight: 700;
+          text-decoration: none;
+          color: $Dark-Grayis-Violet;
+        }
+      }
+      li:last-child {
+        -webkit-box-shadow:inset 0px 0px 0px 1px $Dark-Violet;
+        -moz-box-shadow:inset 0px 0px 0px 1px $Dark-Violet;
+        box-shadow:inset 0px 0px 0px 1px $Dark-Violet;
+      }
+      li:hover a{
+       color: $Dark-Violet;
+  
+      }
+      li:last-child:hover {
+        background-color: $Dark-Violet;
+        a {
+          color: white;
+        }
+      }
+    }
+
+
+
+  }
+
+  #mobile-nav {
+    display: none;
+  }
+  
+  .mobile-image-container {
+    display: none;
+  }
+
+  .desktop-image-container {
+    display: block;
+  }
+  #humanizing {
+    background-image: none;
+    div {
+      height: 350px;
+      .left {
+        float: left;
+        text-align: left;
+        h1 {
+          text-align: left;
+        }
+      }
+      .right {
+        float: right;
+      }
+    } 
+
+    #background-left {
+      position: absolute;
+      height: 530px;
+      width: 100%;
+      background-image: url(images/bg-pattern-intro-left-desktop.svg);
+      background-repeat: no-repeat ;
+      background-blend-mode: difference;
+      background-size: contain;
+      top: 380px;
+
+    }
+
+    #background-right {
+      background-image: url(images/bg-pattern-intro-right-desktop.svg);
+      top: 0;
+      height: 530px;
+      background-position-y: -70px;
+    }
+  
+  } /* end # humanizing */
+
+  #different {
+    
+    .item-container, .item-container h3 {
+      text-align: left;
+      
+    }
+    div div {
+      width: 32.4%;
+    }
+
+    h1 {
+      padding-top: 230px;
+      text-align: left;
+    }
+
+    h1::before {
+      position: relative;
+      left: 0;
+      transform: none;
+      margin-bottom: 60px;
+    }
+
+    .item {
+      display: inline-block;
+      padding-left: 15px;
+    }
+
+    .item:first-child {
+      padding-left: 0px;
+    }
+
+  }
+
+  #how-we-work {
+    margin-left: auto;
+    margin-right: auto;
+    height: 180px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    background-image: url(images/bg-pattern-how-we-work-desktop.svg);
+
+    div {
+      padding-top: 20px;
+
+    }
+    div div {
+      display: inline-block;
+      vertical-align: top;
+    }
+    div div h1 {
+      text-align: left;
+      font-size: 50px;
+      padding-left: 40px;
+    }
+
+    div div#button-container {
+      padding-top: 65px;
+    }
+
+  }
+
+  footer {
+    background-image: url(images/bg-pattern-footer-desktop.svg);
+    background-size: 48%;
+    .social-links {
+      position: relative;
+
+      .social-links-list:after {
+        width: 200%;
+        left: 0;
+        margin-top: 37px;
+      }
+
+      img, div {
+        display: inline-block;
+        vertical-align: top;
+        position: absolute;
+      }
+      div:first-child {
+        left: 0;
+        background-color: red;
+        text-align: left;
+      }
+
+      img {
+        padding-top: 30px;
+      }
+      div {
+        text-align: right;
+        right: 0;
+      }
+    }
+    .site-links {
+      .lg-2 {
+        display: inline-block;
+        vertical-align: top;
+      }
+    }
+    
+  }
+
+
+} /* End media query (min-width: 1440px) */

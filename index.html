@@ -19,17 +19,14 @@
   </style>
 </head>
 <body>
-  <div class="header sm-10">
+  <div class="header sm-10 content-container">
     <div class="logo">
       <a class="logo-link" href="#">
         <img src="images/logo.svg" alt="insure-logo" class="logo-img">
       </a>
     </div> <!-- /logo -->
     <nav>
-      <div class="nav-control">
-        <button id="menu-toggle" class="icon-hamburger" onclick="mobileMenu()"></button>
-      </div> <!-- /nav-control -->
-      <div id="mobile-menu" class="nav-list">
+      <div id="desktop-nav">
         <ul>
           <li><a href="#">How we work</a></li>
           <li><a href="#">Blog</a></li>
@@ -37,64 +34,96 @@
           <li><a href="#">View plans</a></li>
         </ul>
       </div>
+      <div id="mobile-nav">
+        <div class="nav-control">
+          <button id="menu-toggle" class="icon-hamburger" onclick="mobileMenu()"></button>
+        </div> <!-- /nav-control -->
+        <div id="mobile-menu" class="nav-list">
+          <ul>
+            <li><a href="#">How we work</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Account</a></li>
+            <li><a href="#">View plans</a></li>
+          </ul>
+        </div>
+      </div>
     </nav>
   </div> <!-- /header -->
 
   <main id="main-content">
-    <div class="mobile-image-container" class="sm-10">
+    <div class="mobile-image-container sm-10">
       <img src="images/image-intro-mobile.jpg" alt="">
     </div>
 
-    <section id="humanizing" class="sm-10">  
-      <h1 class="light">Humanizing<br> your insurance.</h1>
-      <p class="light-gray">Get your life insurance coverage easier and faster. We blend our expertise and<br class="mobile-br"> technology to help you find the plan that’s right for you. Ensure you and your loved<br class="mobile-br"> ones are protected.</p>
-      
-      <a href="#" class="btn"><span>View plans</span></a>
-      
+    <section id="humanizing">  
+      <div class="content-container lg-10">
+        <div class="lg-4 left">
+          <h1 class="light">Humanizing<br> your insurance.</h1>
+          <p class="light-gray">Get your life insurance coverage easier and faster. We blend our expertise and<br class="mobile-br"> technology to help you find the plan that’s right for you. Ensure you and your loved<br class="mobile-br"> ones are protected.</p>
+          
+          <a href="#" class="btn"><span>View plans</span></a>
+        </div>
+        <div class="lg-5 right">
+          <div class="desktop-image-container">
+            <img src="images/image-intro-desktop.jpg" alt="">
+          </div>
+        </div>
+      </div>
+     
+      <div id="background-left"></div>
       <div id="background-right"></div>
 
     </section> <!-- /section humanizing-->
 
-    <section id="different" class="sm-10"> 
+    <section id="different" class="sm-10 lg-10 content-container"> 
 
       <h1 class="dark">We’re different</h1>
-      
-      <div>
-        <img src="images/icon-snappy-process.svg" alt="icon-snappy-process">
-        <h3>Snappy Process</h3>
-        <p>Our application process can be completed in minutes, not hours. Don’t get 
-          stuck filling in tedious forms.</p>
-      </div>
 
-      <div>
-        <img src="images/icon-affordable-prices.svg" alt="icon-affordable-prices">
-        <h3>Affordable Prices</h3>
-        <p>We don’t want you worrying about high monthly costs. Our prices may be low, 
-        but we still offer the best coverage possible.</p>
-      </div>
-      
-      <div>
-        <img src="images/icon-people-first.svg" alt="icon-people-first">
-        <h3>People First</h3>
-        <p>Our plans aren’t full of conditions and clauses to prevent payouts. We make 
-        sure you’re covered when you need it.</p>
+      <div class="item-container lg-10">
+        <div class="item lg-3">
+          <img src="images/icon-snappy-process.svg" alt="icon-snappy-process">
+          <h3>Snappy Process</h3>
+          <p>Our application process can be completed in minutes, not hours. Don’t get 
+            stuck filling in tedious forms.</p>
+        </div>
+        <div class="item lg-3">
+          <img src="images/icon-affordable-prices.svg" alt="icon-affordable-prices">
+          <h3>Affordable Prices</h3>
+          <p>We don’t want you worrying about high monthly costs. Our prices may be low, 
+          but we still offer the best coverage possible.</p>
+        </div>
+        <div class="item lg-3">
+          <img src="images/icon-people-first.svg" alt="icon-people-first">
+          <h3>People First</h3>
+          <p>Our plans aren’t full of conditions and clauses to prevent payouts. We make 
+          sure you’re covered when you need it.</p>
+        </div>
+
       </div>
 
     </section> <!-- /section different-->
 
-    <section id="how-we-work" class="sm-10">
-
-      <h1 class="light">Find out more about how we work</h1>
-
-      <a href="#" class="btn"><span>How we work</span></a>
+    <section id="how-we-work" class="sm-10 content-container">
+      <div class="lg-10">
+        <div class="lg-5">
+          <h1 class="light">Find out more <br class="desktop-br"> about how we work</h1>
+        </div>
+        <div class="lg-2"></div>
+  
+        <div id="button-container" class="lg-3">
+          <a href="#" class="btn"><span>How we work</span></a>
+        </div>
+      </div>
 
     </section> <!-- /section how we work-->
   </main>
 
   <footer id="footer-content">
-    <section class="social-links"> 
-      <img src="images/logo.svg" alt="" class="src">
-      <div class="social-links-list col">
+    <section class="social-links content-container lg-10"> 
+      <div class="lg-5">
+        <img src="images/logo.svg" alt="" class="src">
+      </div>
+      <div class="social-links-list col lg-5">
         <a href="#" class="icon fb-icon"></a>
         <a href="#" class="icon twitter-icon"></a>
         <a href="#" class="icon pinterest-icon"></a>
@@ -102,8 +131,8 @@
       </div>
     </section> <!-- /section Social Links -->
 
-    <section class="site-links">
-      <div class="sm-10">
+    <section class="site-links content-container lg-10">
+      <div class="sm-10 lg-2">
         <h4>Our company</h4>
         <ul>
           <li><a href="#">How we work</a></li>
@@ -113,7 +142,7 @@
         </ul>
       </div>
 
-      <div class="sm-10">
+      <div class="sm-10 lg-2">
         <h4>Help me</h4>
         <ul>
           <li><a href="#">FAQ</a></li>
@@ -123,7 +152,7 @@
         </ul>
       </div>
 
-      <div class="sm-10">
+      <div class="sm-10 lg-2">
         <h4>Contact</h4>
         <ul>
           <li><a href="#">Sales</a></li>
@@ -132,7 +161,7 @@
         </ul>
       </div>
 
-      <div class="sm-10">
+      <div class="sm-10 lg-2">
         <h4>Others</h4>
         <ul>
           <li><a href="#">Careers</a></li>
