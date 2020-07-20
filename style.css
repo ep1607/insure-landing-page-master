@@ -563,36 +563,45 @@ footer .site-links ul li a {
   }
 
   #desktop-nav {
-    padding-top: 23px;
+    padding-top: 22px;
     display: block;
     height: 100%;
+  }
+  #desktop-nav ul {
+    padding-top: 10px;
+  }
+  #desktop-nav ul li:last-child {
+    padding-left: 15px;
+    padding-right: 0;
   }
   #desktop-nav ul li {
     display: inline-block;
     text-transform: uppercase;
     font-family: "Karla", sans-serif;
-    padding: 12px 25px 12px 25px;
+    padding: 0px 12px 12px 12px;
   }
   #desktop-nav ul li a {
     font-weight: 700;
     text-decoration: none;
     color: #837d87;
+    font-size: 13px;
+    letter-spacing: 1.5px;
   }
-  #desktop-nav ul li:last-child {
+  #desktop-nav ul li:last-child a {
     -webkit-box-shadow: inset 0px 0px 0px 1px #2d2640;
     -moz-box-shadow: inset 0px 0px 0px 1px #2d2640;
     box-shadow: inset 0px 0px 0px 1px #2d2640;
+    padding: 12px 27px 12px 27px;
   }
   #desktop-nav ul li:hover a {
     color: #2d2640;
   }
-  #desktop-nav ul li:last-child:hover {
-    background-color: #2d2640;
-  }
   #desktop-nav ul li:last-child:hover a {
+    background-color: #2d2640;
     color: white;
   }
 
+  /* end desktop-nav */
   #mobile-nav {
     display: none;
   }
@@ -605,8 +614,14 @@ footer .site-links ul li a {
     display: block;
   }
 
+  h1 {
+    font-size: 4.36rem;
+  }
+
   #humanizing {
     background-image: none;
+    padding-top: 105px;
+    padding-bottom: 145px;
   }
   #humanizing div {
     height: 350px;
@@ -617,25 +632,45 @@ footer .site-links ul li a {
   }
   #humanizing div .left h1 {
     text-align: left;
+    padding-top: 65px;
+    line-height: 4rem;
+  }
+  #humanizing div .left h1:before {
+    background-color: white;
+    content: "";
+    display: block;
+    height: 2px;
+    position: absolute;
+    width: 150px;
+    margin-top: -60px;
   }
   #humanizing div .right {
     float: right;
   }
+  #humanizing p {
+    padding-top: 10px;
+    padding-right: 10px;
+    line-height: 1.8rem;
+    padding-bottom: 38px;
+  }
+  #humanizing .desktop-image-container {
+    text-align: right;
+  }
   #humanizing #background-left {
     position: absolute;
-    height: 530px;
+    height: 510px;
     width: 100%;
     background-image: url(images/bg-pattern-intro-left-desktop.svg);
     background-repeat: no-repeat;
     background-blend-mode: difference;
     background-size: contain;
-    top: 380px;
+    top: 430px;
   }
   #humanizing #background-right {
     background-image: url(images/bg-pattern-intro-right-desktop.svg);
     top: 0;
     height: 530px;
-    background-position-y: -70px;
+    background-position-y: -80px;
   }
 
   /* end # humanizing */
@@ -643,11 +678,12 @@ footer .site-links ul li a {
     text-align: left;
   }
   #different div div {
-    width: 32.4%;
+    width: 32%;
   }
   #different h1 {
-    padding-top: 230px;
+    padding-top: 205px;
     text-align: left;
+    padding-bottom: 90px;
   }
   #different h1::before {
     position: relative;
@@ -657,16 +693,22 @@ footer .site-links ul li a {
   }
   #different .item {
     display: inline-block;
-    padding-left: 15px;
+    padding-left: 22px;
+  }
+  #different .item p {
+    line-height: 1.68em;
   }
   #different .item:first-child {
     padding-left: 0px;
   }
 
+  /* end #different */
   #how-we-work {
     margin-left: auto;
     margin-right: auto;
-    height: 180px;
+    margin-top: 100px;
+    margin-bottom: 150px;
+    height: 190px;
     padding-top: 30px;
     padding-bottom: 30px;
     background-image: url(images/bg-pattern-how-we-work-desktop.svg);
@@ -681,18 +723,22 @@ footer .site-links ul li a {
   #how-we-work div div h1 {
     text-align: left;
     font-size: 50px;
-    padding-left: 40px;
+    padding-left: 80px;
+    font-size: 3.46rem;
   }
   #how-we-work div div#button-container {
     padding-top: 65px;
   }
 
+  /* end #how-we-work */
   footer {
     background-image: url(images/bg-pattern-footer-desktop.svg);
-    background-size: 48%;
+    background-size: 38%;
   }
   footer .social-links {
     position: relative;
+    padding-top: 40px;
+    height: 90px;
   }
   footer .social-links .social-links-list:after {
     width: 200%;
@@ -716,10 +762,16 @@ footer .site-links ul li a {
     text-align: right;
     right: 0;
   }
-  footer .site-links .lg-2 {
+  footer .site-links {
+    text-align: left;
+  }
+  footer .site-links .lg-2, footer .site-links .lg-1 {
     display: inline-block;
     vertical-align: top;
+    padding-right: 50px;
   }
+
+  /* end footer */
 }
 /* End media query (min-width: 1440px) */
 
