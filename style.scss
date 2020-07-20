@@ -413,7 +413,7 @@ footer {
     font-weight: 700;
   }
 
-  a.btn:hover span{
+  a.btn:hover span {
     background-color: white;
     color: $Dark-Violet;
   }
@@ -503,6 +503,7 @@ footer {
       .left {
         float: left;
         text-align: left;
+        z-index: 0;
         h1 {
           text-align: left;
           padding-top: 65px;
@@ -528,6 +529,15 @@ footer {
       line-height: 1.8rem;
       padding-bottom: 38px;
     }
+    a.btn {
+      z-index: 1;
+      position: absolute;
+    }
+    a.btn:hover span {
+      background-color: white;
+      color: $Dark-Violet;
+    }
+
     .desktop-image-container {
       text-align: right;
     }
@@ -540,13 +550,14 @@ footer {
       background-blend-mode: difference;
       background-size: contain;
       top: 430px;
-
+      z-index: 0;
     }
     #background-right {
       background-image: url(images/bg-pattern-intro-right-desktop.svg);
       top: 0;
       height: 530px;
       background-position-y: -80px;
+      z-index: 0;
     }
   } /* end # humanizing */
 

@@ -629,6 +629,7 @@ footer .site-links ul li a {
   #humanizing div .left {
     float: left;
     text-align: left;
+    z-index: 0;
   }
   #humanizing div .left h1 {
     text-align: left;
@@ -653,6 +654,14 @@ footer .site-links ul li a {
     line-height: 1.8rem;
     padding-bottom: 38px;
   }
+  #humanizing a.btn {
+    z-index: 1;
+    position: absolute;
+  }
+  #humanizing a.btn:hover span {
+    background-color: white;
+    color: #2d2640;
+  }
   #humanizing .desktop-image-container {
     text-align: right;
   }
@@ -665,12 +674,14 @@ footer .site-links ul li a {
     background-blend-mode: difference;
     background-size: contain;
     top: 430px;
+    z-index: 0;
   }
   #humanizing #background-right {
     background-image: url(images/bg-pattern-intro-right-desktop.svg);
     top: 0;
     height: 530px;
     background-position-y: -80px;
+    z-index: 0;
   }
 
   /* end # humanizing */
