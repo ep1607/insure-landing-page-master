@@ -477,6 +477,9 @@ footer .social-links .social-links-list .pinterest-icon {
 footer .social-links .social-links-list .instagram-icon {
   background-image: url(images/icon-instagram.svg);
 }
+footer .social-links .social-links-list .icon:hover {
+  filter: brightness(0) saturate(100%) invert(18%) sepia(3%) saturate(5679%) hue-rotate(215deg) brightness(94%) contrast(85%);
+}
 footer .social-links .social-links-list::after {
   background-color: #95a9c6;
   content: "";
@@ -510,6 +513,9 @@ footer .site-links ul li a {
   font-weight: 700;
   color: black;
 }
+footer .site-links ul li a:hover {
+  color: #837d87;
+}
 
 .desktop-image-container {
   display: none;
@@ -524,7 +530,7 @@ footer .site-links ul li a {
   padding-bottom: 20px;
 }
 
-@media only screen and (max-width: 1439px) {
+@media only screen and (max-width: 767px) {
   #desktop-nav {
     display: none;
   }
@@ -533,33 +539,13 @@ footer .site-links ul li a {
     display: block;
   }
 }
-@media only screen and (min-width: 1440px) {
+@media only screen and (min-width: 768px) {
   main section {
-    padding-left: 0;
-    padding-right: 0;
+    padding: 0;
   }
 
-  a.btn span {
-    font-weight: 700;
-  }
-
-  a.btn:hover span {
-    background-color: white;
-    color: #2d2640;
-  }
-
-  .content-container {
-    width: 1110px;
-    margin: auto;
-  }
-
-  .header .logo, .header nav {
-    padding-left: 0;
-    padding-right: 0;
-  }
-  .header nav {
-    padding-top: 0;
-    padding-bottom: 0;
+  #mobile-nav {
+    display: none;
   }
 
   #desktop-nav {
@@ -600,10 +586,22 @@ footer .site-links ul li a {
     background-color: #2d2640;
     color: white;
   }
+  #desktop-nav a.btn span {
+    font-weight: 700;
+  }
+  #desktop-nav a.btn:hover span {
+    background-color: white;
+    color: #2d2640;
+  }
 
   /* end desktop-nav */
-  #mobile-nav {
-    display: none;
+  .header .logo, .header nav {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .header nav {
+    padding-top: 0;
+    padding-bottom: 0;
   }
 
   .mobile-image-container {
@@ -614,17 +612,14 @@ footer .site-links ul li a {
     display: block;
   }
 
-  h1 {
-    font-size: 4.36rem;
-  }
-
   #humanizing {
-    background-image: none;
-    padding-top: 105px;
-    padding-bottom: 145px;
+    padding: 105px 20px 145px 20px;
+  }
+  #humanizing img {
+    width: 100%;
   }
   #humanizing div {
-    height: 350px;
+    height: 200px;
   }
   #humanizing div .left {
     float: left;
@@ -664,6 +659,101 @@ footer .site-links ul li a {
   }
   #humanizing .desktop-image-container {
     text-align: right;
+  }
+
+  /* end # humanizing */
+  #how-we-work {
+    padding: 0;
+    margin: 0;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px;
+    margin-bottom: 150px;
+    height: 190px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    background-image: url(images/bg-pattern-how-we-work-desktop.svg);
+  }
+  #how-we-work div {
+    padding-top: 5px;
+  }
+  #how-we-work div div {
+    display: inline-block;
+    vertical-align: top;
+  }
+  #how-we-work div div h1 {
+    text-align: left;
+    font-size: 50px;
+    padding-left: 80px;
+    font-size: 3.46rem;
+  }
+  #how-we-work div div#button-container {
+    padding-top: 65px;
+  }
+}
+/* end media query min-width: 768px */
+@media only screen and (min-width: 992px) {
+  footer {
+    background-image: url(images/bg-pattern-footer-desktop.svg);
+    background-size: 38%;
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+  footer .social-links {
+    position: relative;
+    padding-top: 40px;
+    height: 90px;
+  }
+  footer .social-links .social-links-list:after {
+    width: 200%;
+    left: 0;
+    margin-top: 37px;
+  }
+  footer .social-links img, footer .social-links div {
+    display: inline-block;
+    vertical-align: top;
+    position: absolute;
+  }
+  footer .social-links div:first-child {
+    left: 0;
+    background-color: red;
+    text-align: left;
+  }
+  footer .social-links img {
+    padding-top: 30px;
+  }
+  footer .social-links div {
+    text-align: right;
+    right: 0;
+  }
+  footer .site-links {
+    text-align: left;
+  }
+  footer .site-links .lg-2, footer .site-links .lg-1 {
+    display: inline-block;
+    vertical-align: top;
+    padding-right: 40px;
+  }
+
+  /* end footer */
+}
+@media only screen and (min-width: 1200px) {
+  .content-container {
+    width: 1110px;
+    margin: auto;
+  }
+
+  h1 {
+    font-size: 4.36rem;
+  }
+
+  #humanizing {
+    background-image: none;
+    padding-top: 105px;
+    padding-bottom: 145px;
+  }
+  #humanizing div {
+    height: 350px;
   }
   #humanizing #background-left {
     position: absolute;
@@ -714,71 +804,16 @@ footer .site-links ul li a {
   }
 
   /* end #different */
-  #how-we-work {
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 100px;
-    margin-bottom: 150px;
-    height: 190px;
-    padding-top: 30px;
-    padding-bottom: 30px;
-    background-image: url(images/bg-pattern-how-we-work-desktop.svg);
-  }
   #how-we-work div {
     padding-top: 20px;
-  }
-  #how-we-work div div {
-    display: inline-block;
-    vertical-align: top;
-  }
-  #how-we-work div div h1 {
-    text-align: left;
-    font-size: 50px;
-    padding-left: 80px;
-    font-size: 3.46rem;
-  }
-  #how-we-work div div#button-container {
-    padding-top: 65px;
   }
 
   /* end #how-we-work */
   footer {
-    background-image: url(images/bg-pattern-footer-desktop.svg);
-    background-size: 38%;
-  }
-  footer .social-links {
-    position: relative;
-    padding-top: 40px;
-    height: 90px;
-  }
-  footer .social-links .social-links-list:after {
-    width: 200%;
-    left: 0;
-    margin-top: 37px;
-  }
-  footer .social-links img, footer .social-links div {
-    display: inline-block;
-    vertical-align: top;
-    position: absolute;
-  }
-  footer .social-links div:first-child {
-    left: 0;
-    background-color: red;
-    text-align: left;
-  }
-  footer .social-links img {
-    padding-top: 30px;
-  }
-  footer .social-links div {
-    text-align: right;
-    right: 0;
-  }
-  footer .site-links {
-    text-align: left;
+    padding-left: 0;
+    padding-right: 0;
   }
   footer .site-links .lg-2, footer .site-links .lg-1 {
-    display: inline-block;
-    vertical-align: top;
     padding-right: 50px;
   }
 

@@ -183,6 +183,7 @@ main {
         display: none;
     }
 }
+
 @media all and (max-width:375px) {
     .desktop-br {
         display: none;
@@ -193,10 +194,9 @@ main {
  }
 
 .mobile-image-container {
-  img 
-    {
-      width: 100%;
-    }
+  img {
+    width: 100%;
+  }
 }
     
 /*section specific styles*/
@@ -204,11 +204,9 @@ main {
     background-color:hsl(256, 26%, 20%);
     background-image: 
         url(images/bg-pattern-intro-left-mobile.svg);
-        //url(images/bg-pattern-intro-right-mobile.svg);
     background-repeat: no-repeat;
     background-position:
         top left;
-        //bottom right;
     padding-top: 93px;
     padding-bottom: 105px; 
     margin-bottom: 142px;
@@ -221,7 +219,6 @@ main {
         width: 100%;
         left: 0;
         top: 345px;
-        //background-color: yellowgreen;
         position: absolute;
         background-image: url(images/bg-pattern-intro-right-mobile.svg);
         background-repeat: no-repeat;
@@ -303,6 +300,7 @@ footer {
   img {
     padding-top: 85px;
   }
+
   .social-links {
     height: 200px;
     .social-links-list {
@@ -316,6 +314,7 @@ footer {
           background-size: contain;
           background-repeat: no-repeat;
           display: inline-block;
+
         }
         .icon:first-child {
           margin-left: 0px;
@@ -326,7 +325,7 @@ footer {
       
         .twitter-icon {
           background-image: url(images/icon-twitter.svg);
-        background-position-y: 2px;
+          background-position-y: 2px;
         }
       
         .pinterest-icon {
@@ -335,6 +334,9 @@ footer {
       
         .instagram-icon {
           background-image: url(images/icon-instagram.svg);
+        }
+        .icon:hover {
+          filter: brightness(0) saturate(100%) invert(18%) sepia(3%) saturate(5679%) hue-rotate(215deg) brightness(94%) contrast(85%);
         }
     }
     .social-links-list::after {
@@ -370,7 +372,9 @@ footer {
         letter-spacing: 1.1px;
         font-weight: 700;
         color: black;
-  
+      }
+      a:hover {
+        color: $Dark-Grayis-Violet;
       }
     }
   }
@@ -389,7 +393,7 @@ footer {
 }
 
 
-@media only screen and (max-width: 1439px) {
+@media only screen and (max-width: 767px) {
   //start showing nav button
   #desktop-nav {
     display: none;
@@ -401,39 +405,16 @@ footer {
   
 }
 
-@media only screen and (min-width: 1440px) {
+
+//tablet media query
+@media only screen and (min-width: 768px) {
 
   main section {
-    padding-left: 0;
-    padding-right: 0;
+    padding:0;
   }
-
-
-  a.btn span {
-    font-weight: 700;
+  #mobile-nav {
+    display: none;
   }
-
-  a.btn:hover span {
-    background-color: white;
-    color: $Dark-Violet;
-  }
-
-  .content-container {
-    width: 1110px;
-    margin: auto;
-  }
-
-  .header {
-    .logo, nav {
-      padding-left: 0;
-      padding-right: 0;
-    }
-    nav {
-      padding-top: 0;
-      padding-bottom: 0;
-    }
-  }
-
   #desktop-nav {
     padding-top: 22px;
     display: block;
@@ -476,12 +457,29 @@ footer {
         color: white;
       }
     }
-  } /* end desktop-nav */
-
-  #mobile-nav {
-    display: none;
-  }
   
+    a.btn span {
+      font-weight: 700;
+    }
+  
+    a.btn:hover span {
+      background-color: white;
+      color: $Dark-Violet;
+    }
+    
+  } /* end desktop-nav */
+  
+  .header {
+    .logo, nav {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+    nav {
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+  }
+
   .mobile-image-container {
     display: none;
   }
@@ -490,16 +488,15 @@ footer {
     display: block;
   }
 
-  h1 {
-    font-size: 4.36rem;
-  }
-
   #humanizing {
-    background-image: none;
-    padding-top: 105px;
-    padding-bottom: 145px;
+    padding: 105px 20px 145px 20px;
+
+    img {
+      width: 100%;
+    }
+
     div {
-      height: 350px;
+      height: 200px;
       .left {
         float: left;
         text-align: left;
@@ -541,6 +538,108 @@ footer {
     .desktop-image-container {
       text-align: right;
     }
+
+  } /* end # humanizing */
+
+  #how-we-work {
+    padding: 0;
+    margin: 0;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px;
+    margin-bottom: 150px;
+    height: 190px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    background-image: url(images/bg-pattern-how-we-work-desktop.svg);
+    div {
+      padding-top: 5px;
+
+    }
+    div div {
+      display: inline-block;
+      vertical-align: top;
+    }
+    div div h1 {
+      text-align: left;
+      font-size: 50px;
+      padding-left: 80px;
+      font-size: 3.46rem;
+    }
+
+    div div#button-container {
+      padding-top: 65px;
+    }
+  }
+
+}  /* end media query min-width: 768px */
+
+@media only screen and (min-width: 992px) {
+  footer {
+    background-image: url(images/bg-pattern-footer-desktop.svg);
+    background-size: 38%;
+    padding-right: 20px;
+    padding-left: 20px;
+
+    .social-links {
+      position: relative;
+      padding-top: 40px;
+      height: 90px;
+      .social-links-list:after {
+        width: 200%;
+        left: 0;
+        margin-top: 37px;
+      }
+
+      img, div {
+        display: inline-block;
+        vertical-align: top;
+        position: absolute;
+      }
+      div:first-child {
+        left: 0;
+        background-color: red;
+        text-align: left;
+      }
+
+      img {
+        padding-top: 30px;
+      }
+      div {
+        text-align: right;
+        right: 0;
+      }
+    }
+    .site-links {
+      text-align: left;
+      .lg-2, .lg-1 {
+        display: inline-block;
+        vertical-align: top;
+        padding-right: 40px;
+      }
+    } 
+  } /* end footer */
+}
+
+@media only screen and (min-width: 1200px) {
+
+  .content-container {
+    width: 1110px;
+    margin: auto;
+  }
+
+  h1 {
+    font-size: 4.36rem;
+  }
+
+  #humanizing {
+    background-image: none;
+    padding-top: 105px;
+    padding-bottom: 145px;
+    div {
+      height: 350px;
+    } 
+   
     #background-left {
       position: absolute;
       height: 510px;
@@ -562,7 +661,7 @@ footer {
   } /* end # humanizing */
 
   #different {
-  
+    
     .item-container, .item-container h3 {
       text-align: left;
     }
@@ -599,72 +698,17 @@ footer {
   } /* end #different */
 
   #how-we-work {
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 100px;
-    margin-bottom: 150px;
-    height: 190px;
-    padding-top: 30px;
-    padding-bottom: 30px;
-    background-image: url(images/bg-pattern-how-we-work-desktop.svg);
 
     div {
       padding-top: 20px;
-
-    }
-    div div {
-      display: inline-block;
-      vertical-align: top;
-    }
-    div div h1 {
-      text-align: left;
-      font-size: 50px;
-      padding-left: 80px;
-      font-size: 3.46rem;
-    }
-
-    div div#button-container {
-      padding-top: 65px;
     }
   } /* end #how-we-work */
 
   footer {
-    background-image: url(images/bg-pattern-footer-desktop.svg);
-    background-size: 38%;
-    .social-links {
-      position: relative;
-      padding-top: 40px;
-      height: 90px;
-      .social-links-list:after {
-        width: 200%;
-        left: 0;
-        margin-top: 37px;
-      }
-
-      img, div {
-        display: inline-block;
-        vertical-align: top;
-        position: absolute;
-      }
-      div:first-child {
-        left: 0;
-        background-color: red;
-        text-align: left;
-      }
-
-      img {
-        padding-top: 30px;
-      }
-      div {
-        text-align: right;
-        right: 0;
-      }
-    }
+    padding-left: 0;
+    padding-right: 0;
     .site-links {
-      text-align: left;
       .lg-2, .lg-1 {
-        display: inline-block;
-        vertical-align: top;
         padding-right: 50px;
       }
     } 
