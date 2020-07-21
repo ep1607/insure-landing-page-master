@@ -331,6 +331,11 @@ main section p {
   letter-spacing: 1.7px;
 }
 
+.btn:hover span {
+  background-color: white;
+  color: #2d2640;
+}
+
 /* mobile and desktop line breaks */
 @media all and (min-width: 376px) {
   .desktop-br {
@@ -365,6 +370,11 @@ main section p {
   margin-bottom: 142px;
   background-blend-mode: difference;
   position: relative;
+}
+#humanizing .btn {
+  position: absolute;
+  z-index: 1;
+  transform: translate(-50%, 0);
 }
 #humanizing #background-right {
   color: white;
@@ -650,6 +660,7 @@ footer .site-links ul li a:hover {
     padding-bottom: 38px;
   }
   #humanizing a.btn {
+    transform: none;
     z-index: 1;
     position: absolute;
   }
@@ -748,6 +759,7 @@ footer .site-links ul li a:hover {
   }
 
   #humanizing {
+    padding: 0;
     background-image: none;
     padding-top: 105px;
     padding-bottom: 145px;
