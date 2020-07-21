@@ -4,16 +4,19 @@ function mobileMenu() {
     var button = document.getElementById("menu-toggle");
     var main = document.getElementById("main-content");
     var footer = document.getElementById("footer-content");
-    
+
     if (menu.style.opacity === "100") {
         menu.style.opacity = "0";
         button.style.backgroundImage = "url('images/icon-hamburger.svg')";
+        button.setAttribute('aria-expanded', 'false');
         main.classList.remove("blur");
         footer.classList.remove("blur");
+
 
     } else {
         menu.style.opacity = "100";
         button.style.backgroundImage = "url('images/icon-close.svg')";
+        button.setAttribute('aria-expanded', 'true');
         main.classList.add("blur");
         footer.classList.add("blur");
     }
